@@ -25,3 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function toggleMenu() {
+    let menu = document.querySelector("#menu-items");
+    menu.classList.toggle("hidden");
+    console.log('Menu toggled');
+}
+
+let closeButton = document.querySelector(".close");
+closeButton.addEventListener('click', () => {
+    let menu = document.querySelector("#menu-items");
+    menu.classList.add("hidden");
+    console.log('Menu closed');
+});
+
+
+   
+
+
+
+
