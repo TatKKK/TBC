@@ -40,8 +40,27 @@ closeButton.addEventListener('click', () => {
 });
 
 
-   
+// Scroll to top
+let button = document.getElementById("btn");
 
+window.onscroll = function() {
+  scroll();
+};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+function scrollUp() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 
 
 
