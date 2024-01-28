@@ -161,11 +161,12 @@ a {
 
 #menu-items {
   list-style: none;
-  position: relative;
-  margin-top:150px;
-  width: 200px;
+  background-color: var(--bgLight);
+  position:fixed;
+  right:10px;
+  top:0;  
+  width: 30%;
   padding: 5px;
-  max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -175,7 +176,8 @@ a {
   color: rgba(0, 163, 224);
 }
 #menu-items:not(.hidden) {
-  max-height: 500px;
+  height: 100vh;
+  top:0;
   opacity: 1;
 }
 
