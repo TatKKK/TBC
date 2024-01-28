@@ -33,7 +33,7 @@ body {
   --scrollbar-width: 0px;
 }
 
-ul {
+ol, ul {
   list-style: none;
 }
 
@@ -479,6 +479,11 @@ a {
   z-index: 1; 
 }
 
+
+.nav-dots .dots li.active {
+  background-color: blue;
+  height:10px;
+}
 .image {
   width: 326.66px;
   min-height: 200px;
@@ -513,6 +518,35 @@ a {
   width: 20px;
   z-index: 1;
   border:none;
+}
+
+.nav-dots{
+  align-self: end;
+  display: block;
+  grid-area: 1/1/1/1;
+  justify-self: center;
+  margin-bottom: 50px;;
+  position: absolute;
+  transform: translateY(50%);
+}
+
+.dots{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+.dots li a{
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  margin: 6px;
+  position: relative;
+  width:6px;
+  background-color: var(--primaryFontColor);
 }
 
 /*| Questions */

@@ -41,6 +41,19 @@ class Carousel {
         });
        
         slides[this.currentIndex].classList.add('active');
+
+        const navDots = this.carouselElement.querySelector('.nav-dots');
+        if (navDots) {
+            const dots = navDots.querySelectorAll('.dots li');
+            dots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === this.currentIndex) {
+                    dot.classList.add('active');
+                }
+            });
+        } else {
+            console.error('The nav-dots element does not exist in the DOM.');
+        }
     }
 
     movePrev() {
@@ -60,6 +73,11 @@ class Carousel {
         }
         this.updateSlidePosition();
     }
+    
+moveTo(index) {
+    this.currentIndex = index;
+    this.updateSlidePosition();
+}
 }
 
 
@@ -82,6 +100,14 @@ const slides = {
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = new Carousel(document.querySelector('#carousel'), slides);
     console.log('DOM is loaded');
+
+    const dots = document.querySelectorAll('.nav-dots .dots li');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            carousel.moveTo(index); 
+        });
+    });
 
     
     const slideInterval = setInterval(() => {
