@@ -523,9 +523,9 @@ a {
 .nav-dots{
   align-self: end;
   display: block;
-  grid-area: 1/1/1/1;
+  
   justify-self: center;
-  margin-bottom: 50px;;
+  
   position: absolute;
   transform: translateY(50%);
 }
@@ -750,6 +750,17 @@ a {
 .slide{
   width:580px;
 }
+
+.banner-txt h3{
+  font-size:22px;
+ 
+}
+.banner-txt h3 span{
+font-size:20px;
+}
+.subtitle{
+  font-size:22px;
+}
 .courses-list{
   margin: 34px 0px 67px calc((100% - 320px) * 0.5);
   flex-direction:column;
@@ -823,6 +834,10 @@ display:block;
     transform: translateY(50%);
 }
 .banner-txt h3 span{
+  font-size:20px;
+}
+
+.subtitle{
   font-size:20px;
 }
  
